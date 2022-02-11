@@ -1,9 +1,10 @@
 table {
     /* border-collapse: separate; */
     border-spacing: 20px 0;
+    width: 100%;
   }
   th {
-    background-color: #4287f5;
+    background-color: blue;
     color: white;
   }
   th,
@@ -12,5 +13,6 @@ table {
     text-align: left;
     border: 1px solid black;
     padding: 5px;
-    margin-left: 95px;
+    padding-left: 2%;
+    align-items: center;
   }
