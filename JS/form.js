@@ -9,7 +9,7 @@ let flag=0;
 
 function validateForm(){
  
-    let username= document.getElementById("username");
+    let username= document.getElementById("username").toLowerCase();
     let pwd= document.getElementById("pwd");
     validate_login(username, pwd, myCallbackFuntion);
     return false;

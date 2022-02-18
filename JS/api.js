@@ -8,7 +8,7 @@ xhttp.onreadystatechange=function(){
       var response=JSON.parse(this.responseText);
       var table = $('#example');
         var rows = "";
-        var noOfClick=0;
+        let noOfClick=0;
         for (var i = 0; i < response.length; i++) {
             var name = response[i].title;
             var status = response[i].completed;
@@ -26,15 +26,13 @@ xhttp.onreadystatechange=function(){
 
         //Promise
 
-        var clickvalidation = new Promise(function(resolve, reject) {
+        let clickvalidation = new Promise(function(resolve, reject) {
           $('input[type=checkbox][id=chk1]').change(function() {
                 if ($(this).is(':checked')) {
                   noOfClick++;
                   if(noOfClick==5){ 
-                    resolve();
-                  }else{
-                  //  reject();
-                  }       
+                   resolve();
+                  }    
                 }
             });
         });
@@ -44,9 +42,10 @@ xhttp.onreadystatechange=function(){
             .then(function () {
                 console.log('Success, You are a GEEK');
                 alert(`Congrats 5 tasks have been successfully completed`);
+              
             })
             .catch(function (e) {
-                console.log('Some error has occurred'+e);
+                console.log(e);
             });
 
       //   $('input[type=checkbox][id=chk1]').change(function() {
